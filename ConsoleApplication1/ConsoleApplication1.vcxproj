@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f0bcd09f-6b5b-4352-8638-9b9038e31f7b}</ProjectGuid>
-    <RootNamespace>February121437</RootNamespace>
+    <ProjectGuid>{7c37ef0c-f7b4-447b-92fa-30c6516f93d3}</ProjectGuid>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>HelpingBob</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,14 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="February12_1437.cpp" />
-    <ClCompile Include="Vehicle.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Vehicle.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="HelpingBobMartinII.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
