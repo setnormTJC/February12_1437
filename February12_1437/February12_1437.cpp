@@ -82,10 +82,10 @@ int main()
 
 	myGrandpasAirplane.printVehicleDeets(); 
 	
-	std::cout.operator<<(3.14) << "\n"; //this is a lil sneak peak at "operator overloading" 
+	//std::cout.operator<<(3.14) << "\n"; //this is a lil sneak peak at "operator overloading" 
 
 	Vehicle me; 
-	me.setTopSpeed(7);  //friend // 7 mph 
+	me.setTopSpeed(7);  // 7 mph 
 
 	//myGrandpasAirplane.vehicleCount; 
 	std::cout << "How many Vehicle objects we have? " << Vehicle::vehicleCount << "\n";

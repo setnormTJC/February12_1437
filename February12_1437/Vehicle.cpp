@@ -5,7 +5,7 @@ int Vehicle::vehicleCount = 0;
 Vehicle::Vehicle()
 {
 	std::cout << "Default constructor of `Vehicle` got called!\n";
-	vehicleCount++; //C++
+	vehicleCount++; 
 }
 
 void Vehicle::setTopSpeed(int someNewSpeed)
