@@ -18,7 +18,7 @@ class Tail
 
 class Dog
 {
-    Nose dogsNose; 
+    Nose dogsNose;  //an example of composition 
     Tail dogsTail; 
     std::string dogsName; 
 };
@@ -35,13 +35,14 @@ class Appliance
 public: 
     std::string applianceName;
     int numberOfAmpsRequired; //ex: 5 amps, 10 amps, 1 amp for overhead light
-    enum class ApplianceSize
+    enum class AllowedSizes
     {
         Small = 1,
         Medium = 2, 
         Large = 3
     };
 
+    AllowedSizes applianceSize; 
 
     //string size; //limit these to small, medium large:
 };
@@ -83,7 +84,7 @@ public:
             std::cout << "Enter the number of AMPS required: \n";
             std::cin >> listOfAppliances[i].numberOfAmpsRequired; //reads in \n as the last character
 
-            std::cin.ignore(); 
+            std::cin.ignore(); //gets rid of newline read in by cin
         }
     }
 
