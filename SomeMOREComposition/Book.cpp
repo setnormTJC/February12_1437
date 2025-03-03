@@ -39,10 +39,7 @@ Book::Book(const std::string& bookFileName)
 
 void Book::printARandomPage(int randomPageNumber)
 {
-	//an example of a "using alias": 
-	//using linesInPage = Book::pages[randomPageNumber].theLinesInThePage; 
 
-	
 	for (const std::string& currentLineInPage : pages[randomPageNumber].theLinesInThePage)
 	{
 		std::cout << currentLineInPage << "\n";

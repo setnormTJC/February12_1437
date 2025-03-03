@@ -14,8 +14,6 @@ public:
 	//use a STATIC array of lines (strings)...
 	std::array<std::string, maxNumberOfLines> theLinesInThePage; 
 
-	//Page()
-
 };
 
 class Book
@@ -24,7 +22,6 @@ private:
 
 public: 
 	std::vector<Page> pages; //PLURAL because presumably, book will have > 1 page
-
 
 	Book() = delete; //disallow using a default constructor (one which has no params)
 
