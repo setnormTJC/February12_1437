@@ -20,13 +20,18 @@ public:
 
 class Book
 {
-	std::vector<Page> pages; //PLURAL because presumably, book will have > 1 page
+private: 
 
 public: 
+	std::vector<Page> pages; //PLURAL because presumably, book will have > 1 page
+
+
 	Book() = delete; //disallow using a default constructor (one which has no params)
 
+	/*Parameterized constructor*/
 	Book(const std::string& bookFileName); 
 
+	void printARandomPage(int randomPageNumber); 
 
 };
 

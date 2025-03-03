@@ -12,32 +12,42 @@ Book::Book(const std::string& bookFileName)
 
 	std::string currentLine; 
 
-
-	int totalLineCount = 0;
+	int lineCounter = 0;
 	while (!fin.eof())
 	{
-		std::getline(fin, currentLine);
-		totalLineCount++; 
-		//std::cout << currentLine << "\n";
+		Page currentPage;
 
-		//what to 0do now?
-		
-		if (totalLineCount % 50 == 0)
+		while (lineCounter < Page::maxNumberOfLines)
 		{
-			//... to be completed later
+			std::getline(fin, currentLine);
+			currentPage.theLinesInThePage[lineCounter] = currentLine;
+			lineCounter++;
+
+			//std::cout << currentLine << "\n";
+
 		}
-		Page currentPage; 
 
-		int numberOfLinesInCurrentPage = 0; 
+		//reset lineCounter to 0 and push currentPage into list of pages: 
+		lineCounter = 0; 
 
-		while (numberOfLinesInCurrentPage < Page::maxNumberOfLines)
-		{
-			currentPage.theLinesInThePage.at(numberOfLinesInCurrentPage)
-				= currentLine;
+		pages.push_back(currentPage);
 
-			numberOfLinesInCurrentPage++; 
-		}
 	}
 
 	fin.close(); 
 }
+
+void Book::printARandomPage(int randomPageNumber)
+{
+	//an example of a "using alias": 
+	//using linesInPage = Book::pages[randomPageNumber].theLinesInThePage; 
+
+	
+	for (const std::string& currentLineInPage : pages[randomPageNumber].theLinesInThePage)
+	{
+		std::cout << currentLineInPage << "\n";
+	}
+}
+
+
+
